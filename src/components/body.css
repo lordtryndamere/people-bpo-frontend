@@ -1,0 +1,11 @@
+
+
+.imgTec{
+    width: 12rem !important;
+    /* margin-left: 6vw !important; */
+}
+
+.card{
+    border: 1px solid turquoise !important;
+    border-radius: 1.25rem !important;
+}
