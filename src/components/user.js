@@ -1,9 +1,9 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form'
-
+import axios  from 'axios';
 import './post.css'
-
+const BaseURL = 'https://us-central1-node-js-functions.cloudfunctions.net/app'
 function User() {
 
     const [datos, setDatos] = useState({
@@ -19,8 +19,12 @@ function User() {
             [event.target.name]: event.target.value
         })
     }
-    const enviarDatos = (data) => {
-        console.log(data);
+    const enviarDatos =async (data) => {
+        let requestToLogin = await axios.post(BaseURL+"/api/users/create",{
+            email:data.email,
+            password:data.password
+        })
+        console.log(requestToLogin);
     }
 
     return (
