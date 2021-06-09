@@ -10,8 +10,10 @@ import 'jquery/dist/jquery.slim';
 import 'bootstrap/dist/js/bootstrap';
 import 'popper.js/dist/popper';
 
-const Productos = lazy(()=>import('./pages/productos'));
-const Carrito = lazy(()=>import('./pages/carrito'))
+const Post = lazy(()=>import('./pages/post'));
+const Home = lazy(()=>import('./pages/home'));
+const User = lazy(()=>import('./pages/user'));
+const Register = lazy(()=>import('./components/register'));
 
 
 ReactDOM.render(
@@ -19,8 +21,10 @@ ReactDOM.render(
         <Router>
             <Suspense  fallback={<p>Cargando</p>}>
                 <Switch>
-                    <Route path='/productos/:productos?' render={props => <Productos {...props}/>}/>
-                    <Route path='/carrito/:cars?' render={props => <Carrito {...props}/>}/>
+                    <Route path='/home/:home?' render={props => <Home {...props}/>}/>
+                    <Route path='/user/:user?' render={props => < User {...props}/>}/>
+                    <Route path='/register/:register?' render={props => < Register {...props}/>}/>
+                    <Route path='/post/:post?' render={props => < Post {...props}/>}/>
                 </Switch>
             </Suspense>
         </Router>

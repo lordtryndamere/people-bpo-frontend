@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(213, 213, 5);
+}
+.logo{
+    height: 40rem;
+    transition: 20s all;
+    
+}
+ 
+.logo:hover{
+    transform: rotate(360deg);
+}
+
+.txt{
+    color: rgb(213, 213, 5) !important; 
+}
+

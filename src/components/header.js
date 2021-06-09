@@ -1,26 +1,25 @@
 import React, { Component } from 'react'
-import cars from '../assets/img/cart-148964_1280.png'
-import  '../components/header.css'
+import { Link } from 'react-router-dom';
+import  './home.css'
 
- class header extends Component {
+
+class header extends Component {
     render() {
         return (
             <>
-                        <div className="col-12 row">
-                            <div className="col-7">
-                                <h3>logo</h3>
-                            </div>
-                            <div className="col-5 row">
-                                <div className="col-10  d-flex justify-content-end">
-                                    <ul className="mt-3">
-                                        <li className=""><a href="../pages/productos.js">Inicio</a></li>
-                                    </ul>
-                                </div>
-                                <div className="col-2 ">
-                                    <img className="cars" href="../pages/carrito.js" src={cars} alt=""/>
-                                </div>
-                            </div>
+                <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+                    <a class="navbar-brand" href="/home">MADARA</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <Link className="mr-2 txt" to="/home"> <strong>Home</strong> </Link>
+                            <Link className="mr-2 txt" to="/user"> <strong>User</strong> </Link>
+                            <Link className="mr-2 txt" to="/post"> <strong>post</strong> </Link>
                         </div>
+                    </div>
+                </nav>
             </>
         )
     }
