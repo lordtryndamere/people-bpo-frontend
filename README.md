@@ -1,1 +1,1 @@
-## Ruta creeada localhost:3000/productos/pages/ ejecutar esta ruta
+## Ruta creeada localhost:3000/home ejecutar esta ruta
