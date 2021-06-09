@@ -1,4 +1,4 @@
-import React,{Suspense,lazy} from 'react';
+import React,{Suspense,lazy,useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter as Router , Switch ,Route } from 'react-router-dom'
@@ -16,10 +16,12 @@ const User = lazy(()=>import('./pages/user'));
 const Register = lazy(()=>import('./components/register'));
 
 
+
 ReactDOM.render(
   <React.StrictMode>   
         <Router>
             <Suspense  fallback={<p>Cargando</p>}>
+  
                 <Switch>
                     <Route path='/home/:home?' render={props => <Home {...props}/>}/>
                     <Route path='/user/:user?' render={props => < User {...props}/>}/>
@@ -31,6 +33,8 @@ ReactDOM.render(
    </React.StrictMode>,
    document.getElementById('root')
 
+
 );
 
 serviceWorker.unregister();
+
