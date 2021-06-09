@@ -17,7 +17,7 @@ const Register = lazy(()=>import('./components/register'));
 
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.StrictMode>   
         <Router>
             <Suspense  fallback={<p>Cargando</p>}>
                 <Switch>
